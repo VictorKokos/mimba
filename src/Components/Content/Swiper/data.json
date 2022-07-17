@@ -1,0 +1,80 @@
+[
+  {
+    "id": 0,
+    "name": "Savva",
+    "desc": "kachok",
+    "age": 15,
+    "image": "11.jpg",
+    "likedUsers": [],
+   
+    "dislikedUsers": [],
+    "likedBy": []
+  },
+  {
+    "id": 1,
+    "name": "Хасбула",
+    "desc": "Ищу девушку",
+    "age": 18,
+    "image": "12.jpg",
+    "likedUsers": [],
+    
+    "dislikedUsers": [],
+    "likedBy": []
+  },
+  {
+    "id": 2,
+    "name": "Анастасия",
+    "desc": "Хочу на конары",
+    "age": 35,
+    "image": "3.jpg",
+    "likedUsers": [],
+    
+    "dislikedUsers": [],
+    "likedBy": []
+  },
+  {
+    "id": 3,
+    "name": "Александра",
+    "desc": "Ищу мужчину с зарплатой от 5000$",
+    "age": 45,
+    "image": "7.jpg",
+    "likedUsers": [],
+    
+    "dislikedUsers": [],
+    "likedBy": []
+  },
+  {
+    "id": 4,
+    "name": "Бугати Матвей",
+    "desc": "Бизнесмен твоего сердца",
+    "age": 28,
+    "image": "13.jpeg",
+    "likedUsers": [],
+    
+    "dislikedUsers": [],
+    "likedBy": []
+  },
+  {
+    "id": 5,
+    "name": "Андрей",
+    "desc": "Dead Inside",
+    "age": 19,
+    "image": "14.jpg",
+    "likedUsers": [],
+    
+    "dislikedUsers": [],
+    "likedBy": []
+  },
+  {
+    "id": 6,
+    "name": "Витюша",
+    "desc": "Ищу умную красивую и спортивную девушку",
+    "age": 19,
+    "image": "15.jpg",
+    "likedUsers": [],
+    
+    "dislikedUsers": [],
+    "likedBy": []
+  }
+  
+]

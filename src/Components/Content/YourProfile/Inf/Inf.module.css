@@ -1,0 +1,12 @@
+.inf
+{
+  grid-area: inf;
+}
+.about, .personal, .whoFind, .interes, .meet 
+{
+font-size: 15px;
+}
+.about h1, .personal h1, .whoFind h1, .interes h1, .meet h1 
+{
+font-size: 20px;
+}

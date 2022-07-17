@@ -1,0 +1,12 @@
+.stats
+{
+  grid-area: stats;
+  color: white;
+  text-align: left;
+  background-color: rgb(57, 148, 253);
+}
+.oneStat
+{
+  display:grid;
+  grid-template-columns: 6fr 1fr;
+}

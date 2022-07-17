@@ -1,0 +1,16 @@
+.content
+{
+  grid-area:c;
+  border:1px solid black;
+  text-align: center;
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-rows: 200px 1fr;
+  grid-template-columns: 2fr 7fr;
+  grid-template-areas:
+  "help main"
+  "stats main";
+  grid-gap: 5px;
+}

@@ -1,0 +1,19 @@
+.app-wrapper
+{
+  display: grid; 
+  grid-template-rows:60px 100px 1fr 100px;
+  grid-gap:5px;
+  grid-template-areas: 
+  "h"
+  "l"
+  "c"
+  "f";
+  position: relative;
+}
+
+
+
+
+
+
+

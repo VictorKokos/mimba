@@ -1,0 +1,24 @@
+.profile
+{
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas: 
+  "photo inf"
+  "aside inf";
+}
+.photo
+{
+  grid-area:photo;
+}
+
+.aside
+{
+  grid-area: aside;
+  background-color: rgb(57, 148, 253);
+}
+.photo img
+{
+width:100%
+}
