@@ -27,33 +27,35 @@ export let addMessageActionCreator = (text) =>({
 let messageCount = 0;
 let MessengerSupportReducer = (state = initialState, action) =>
 {
-  let stateCopy
 switch(action.type)
 {
   case ADD_MESSAGE :
   {
-    messageCount = messageCount+1;
+    messageCount++;
     let newMessage =
       {
         id:messageCount, message:action.message
       }
-     stateCopy = 
-    {
+     return{
       ...state,
-      Messages : [...state.Messages, newMessage] //Вместо push
+      Messages : [...state.Messages, newMessage], //Вместо push
+      NewMessage:{
+        ...state.NewMessage,
+        text : ""
+      }
     }
   
-      return stateCopy
   }
   case CHANGE_NEW_MESSAGE:
   {
-    stateCopy = 
-    {
+    return {
       ...state,
-      NewMessage : {...state.NewMessage}
+      NewMessage : 
+      {
+        ...state.NewMessage,
+        text : action.textFromTextarea
+      }
     }
-    stateCopy.NewMessage.text = action.textFromTextarea;
-    return stateCopy
   }
   default: return initialState
 }
