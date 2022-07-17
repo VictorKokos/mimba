@@ -7,7 +7,7 @@ const Profiles = (props) =>
     return(
       <div className={S.profiles}>
         {props.Profiles.PrInf.map((mini) =>  (<div className={S.profile}>
-    <Profile photo={mini.photo} name={mini.name} id={mini.id}/>
+    <Profile photo={mini.photo} name={mini.name} id={mini.id} key = {mini.id}/>
     </div>) )}
     </div>
     )

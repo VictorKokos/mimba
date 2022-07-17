@@ -4,7 +4,6 @@ import { useState } from 'react';
 import S from './Stats.module.css';
 const Stats = () => 
 {
-    const[lik, setLik] = useState(0)
     return(
       <div className={S.stats}>
           <div className={S.oneStat}>

@@ -3,7 +3,7 @@ import S from './MessengerSupport.module.css'
 const MessengerSupport = (props) => 
 {
   let AllMessages = props.MessengerSupport.Messages.map((message) =>
-   {return <div className = {S.messageArea}>{message.message}</div>})
+   {return <div className = {S.messageArea} key={message.id}>{message.message}</div>})
 
   let OnAddMessage = () => 
   {
