@@ -4,7 +4,7 @@ import React from 'react';
 import './App.css';
 import Header from './Components/Header/Header';
 import Lenta from './Components/Lenta/Lenta'
-import Content from './Components/Content/Content'
+import ContentContainer from './Components/Content/ContentContainer'
 import Footer from './Components/Footer/Footer'
 
 import {BrowserRouter, Routes, Route} from "react-router-dom";
@@ -16,7 +16,7 @@ const App = (props) => {
      
     <Header />
     <Lenta />
-    <Content store = {props.store}/>
+    <ContentContainer/>
    <Footer />
 
    

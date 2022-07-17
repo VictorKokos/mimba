@@ -2,19 +2,6 @@ let ADD_MESSAGE = 'ADD_MESSAGE';
 let CHANGE_NEW_MESSAGE = 'CHANGE_NEW_MESSAGE';
 
 
-export let addMessageActionCreator = (text) =>({
-    type:ADD_MESSAGE,
-     message:text 
-  })
-  export let changeNewMessageActionCreator = (text) =>
-  ({
-  
-    type:CHANGE_NEW_MESSAGE,
-     textFromTextarea:text
-  
-  })
-
-
   let initialState =
 {
     PrInf:
