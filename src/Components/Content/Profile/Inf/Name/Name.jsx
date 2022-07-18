@@ -5,7 +5,7 @@ const Name = (props) =>
     return(
      
         <div className={S.name}>
-       { props.name}
+       { props.name}, {props.age}
                </div>
     )
 }

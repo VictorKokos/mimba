@@ -13,7 +13,8 @@ const Profile = (props) =>
 
      </div>
     <Inf name={props.name} meet={props.meet}
-     interes={props.interes} about={props.about} whoFind={props.whoFind} id={props.id}/>
+     interes={props.interes} about={props.about} whoFind={props.whoFind} id={props.id}
+     age = {props.age} city={props.city} country={props.country}/>
     </div>
     )
 }

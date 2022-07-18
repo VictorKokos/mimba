@@ -11,7 +11,8 @@ const Profile = (props) =>
     return(
      
      <div className={S.inf}>
-      <Name name={props.name} />
+      <Name name={props.name} age={props.age} />
+      <div> {props.city}, {props.country}</div>
       <div className={S.interes}>
 <h1>Интересы</h1>
 <Interes interes={props.interes}/>
