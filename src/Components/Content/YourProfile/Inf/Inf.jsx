@@ -3,17 +3,43 @@ import S from './Inf.module.css'
 
 const Inf = (props) => 
 {
+      const AreaForText = () =>
+{
+      if (props.YourProfile.isChangable)
+      {
+            return(
+                  <textarea></textarea>
+            )
+      }
+      else
+      {
+            return(
+                  <div>
+
+                  </div>
+            )
+      }
+}
+let onButtonClick = () =>
+{
+      props.letChanging()
+}
     return(
      
      <div className={S.inf}>
       <div className={S.Polya}>
        <div className={S.name}>
-      {props.YourProfile.name}
+      {props.YourProfile.name}  <AreaForText />
       </div>
+<div className={S.GenderAge}>
       <h1>Пол, возраст:</h1>
-      {props.YourProfile.gender}, {props.YourProfile.age}
+     
+      {props.YourProfile.gender}, {props.YourProfile.age} 
+      </div>
+      <div className={S.CountryCity}>
       <h1>Страна, город:</h1>
       {props.YourProfile.country}, {props.YourProfile.city}
+      </div>
       <div className={S.interes}>
             
 <h1>Интересы</h1>
@@ -33,6 +59,7 @@ const Inf = (props) =>
       </div>
       
       </div>
+      <button onClick ={onButtonClick}>{props.YourProfile.changingText}</button>
      </div>
     )
 }

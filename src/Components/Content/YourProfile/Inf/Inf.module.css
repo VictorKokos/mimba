@@ -20,3 +20,7 @@ font-size: 20px;
 {
   font-size: 32px;
 }
+.name, .GenderAge, .CountryCity, .about, .whoFind, .interes, .meet
+{
+  display: inline;
+}
