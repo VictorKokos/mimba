@@ -7,7 +7,9 @@ const Inf = (props) =>
      
      <div className={S.inf}>
       <div className={S.Polya}>
+       <div className={S.name}>
       {props.YourProfile.name}
+      </div>
       <h1>Пол, возраст:</h1>
       {props.YourProfile.gender}, {props.YourProfile.age}
       <h1>Страна, город:</h1>

@@ -13,4 +13,10 @@ font-size: 20px;
 .Polya
 {
   margin-top: 10%;
+  text-align: left;
+  margin-left: 10%;
+}
+.name
+{
+  font-size: 32px;
 }
