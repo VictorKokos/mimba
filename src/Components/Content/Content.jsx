@@ -4,7 +4,7 @@ import Stats from './Stats/Stats'
 import Swiper from './Swiper/Swiper'
 import ProfilesContainer from './Profiles/ProfilesContainer'
 import Messenger from './Messenger/Messenger'
-import YourProfile from './YourProfile/YourProfile'
+import YourProfileContainer from './YourProfile/YourProfileContainer'
 import Profile from './Profile/Profile'
 import MessengerSupportContainer from './MessengerSupport/MessengerSupportContainer'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
@@ -30,7 +30,7 @@ const Content = (props) =>
     <Route exact path="/Swiper" element= {<Swiper/>}/>
     <Route exact path="/Profiles" element={<ProfilesContainer/>}/>
     <Route  exact path="/MessengerSupport" element= {<MessengerSupportContainer />}/>
-    <Route  exact path="/Profile" element={<YourProfile/>}/>
+    <Route  exact path="/Profile" element={<YourProfileContainer/>}/>
    {profileRoutes}
    {messageRoutes}
       

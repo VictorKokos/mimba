@@ -2,7 +2,7 @@ import React from 'react';
 import S from './YourProfile.module.css'
 import iSavva from './../../../Source/Portraits/iSavva.jpg'
 import Inf from './Inf/Inf'
-const Profile = () => 
+const Profile = (props) => 
 {
     return(
       <div className={S.profile}>
@@ -13,7 +13,7 @@ const Profile = () =>
      <div className={S.aside} >
 
      </div>
-    <Inf />
+    <Inf YourProfile = {props.YourProfile}/>
     </div>
     )
 }

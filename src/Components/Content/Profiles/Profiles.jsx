@@ -3,7 +3,6 @@ import S from './Profiles.module.css'
 import Profile from './Profile/Profile'
 const Profiles = (props) => 
 {
- 
     return(
       <div className={S.profiles}>
         {props.Profiles.PrInf.map((mini) =>  (<div className={S.profile}>

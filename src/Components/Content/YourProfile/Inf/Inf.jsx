@@ -1,35 +1,38 @@
 import React from 'react';
 import S from './Inf.module.css'
-import Name from './Name/Name'
-import Interes from './Interes/Interes'
-import Meet from './Meet/Meet'
-import About from './About/About'
-import WhoFind from './WhoFind/WhoFind'
 
-const Profile = () => 
+const Inf = (props) => 
 {
     return(
      
      <div className={S.inf}>
-      <Name />
+      <div className={S.Polya}>
+      {props.YourProfile.name}
+      <h1>Пол, возраст:</h1>
+      {props.YourProfile.gender}, {props.YourProfile.age}
+      <h1>Страна, город:</h1>
+      {props.YourProfile.country}, {props.YourProfile.city}
       <div className={S.interes}>
+            
 <h1>Интересы</h1>
-<Interes />
+{props.YourProfile.interes}
       </div>
       <div className={S.meet}>
 <h1>Познакомлюсь</h1>
-<Meet />
+{props.YourProfile.meet}
       </div>
       <div className={S.about}>
 <h1>Расскажите о себе</h1>
-<About />
+{props.YourProfile.about}
       </div>
       <div className={S.whoFind}>
 <h1>Кого ищу</h1>
-<WhoFind />
+{props.YourProfile.whoFind}
+      </div>
+      
       </div>
      </div>
     )
 }
 
-export default Profile;
+export default Inf;
