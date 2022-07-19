@@ -1,14 +1,35 @@
 let CHANGE_NAME = "CHANGE_NAME"
+let LET_CHANGING_NAME = "LET_CHANGING_NAME"
 let CHANGE_NEW_NAME = "CHANGE_NEW_NAME"
+
 let CHANGE_AGE = "CHANGE_AGE"
-let CHANGE_COUNTRY = "CHANGE_COUNTRY"
+let CHANGE_NEW_AGE = "CHANGE_NEW_AGE"
+let LET_CHANGING_AGE = "LET_CHANGING_AGE"
+
 let CHANGE_CITY = "CHANGE_CITY"
-let CHANGE_GENDER = "CHANGE_GENDER"
+let CHANGE_NEW_CITY = "CHANGE_NEW_CITY"
+let LET_CHANGING_CITY = "LET_CHANGING_CITY"
+
 let CHANGE_ABOUT = "CHANGE_ABOUT"
+let CHANGE_NEW_ABOUT = "CHANGE_NEW_ABOUT"
+let LET_CHANGING_ABOUT = "LET_CHANGING_ABOUT"
+
+
 let CHANGE_INTERES = "CHANGE_INTERES"
+let CHANGE_NEW_INTERES = "CHANGE_NEW_INTERES"
+let LET_CHANGING_INTERES = "LET_CHANGING_INTERES"
+
+
 let CHANGE_MEET = "CHANGE_MEET"
+let CHANGE_NEW_MEET = "CHANGE_NEW_MEET"
+let LET_CHANGING_MEET = "LET_CHANGING_MEET"
+
+
+
 let CHANGE_WHOFIND = "CHANGE_WHOFIND"
-let LET_CHANGING = "LET_CHANGING"
+let CHANGE_NEW_WHOFIND = "CHANGE_NEW_WHOFIND"
+let LET_CHANGING_WHOFIND = "LET_CHANGING_WHOFIND"
+
 
 
 export let ChangeNameActionCreator = () =>
@@ -17,74 +38,10 @@ export let ChangeNameActionCreator = () =>
         type : CHANGE_NAME
     }
 }
-
-export let ChangeAgeActionCreator = (text) =>
-{
-    return {
-        type : CHANGE_AGE,
-        text : text
-    }
-}
-
-export let ChangeCountryActionCreator = (text) =>
-{
-    return {
-        type : CHANGE_COUNTRY,
-        text : text
-    }
-}
-
-export let ChangeCityActionCreator = (text) =>
-{
-    return {
-        type : CHANGE_CITY,
-        text : text
-    }
-}
-
-export let ChangeGenderActionCreator = (text) =>
-{
-    return {
-        type : CHANGE_GENDER,
-        text : text
-    }
-}
-
-export let ChangeAboutActionCreator = (text) =>
-{
-    return {
-        type : CHANGE_ABOUT,
-        text : text
-    }
-}
-
-export let ChangeInteresActionCreator = (text) =>
-{
-    return {
-        type : CHANGE_INTERES,
-        text : text
-    }
-}
-
-export let ChangeMeetActionCreator = (text) =>
-{
-    return {
-        type : CHANGE_MEET,
-        text : text
-    }
-}
-
-export let ChangeWhoFindActionCreator = (text) =>
-{
-    return {
-        type : CHANGE_WHOFIND,
-        text : text
-    }
-}
-export let LetChangingActionCreator = () =>
+export let LetChangingNameActionCreator = () =>
 {
     return{
-        type:LET_CHANGING
+        type:LET_CHANGING_NAME
     }
 }
 export let ChangeNewNameActionCreator = (text) =>
@@ -96,22 +53,165 @@ export let ChangeNewNameActionCreator = (text) =>
 }
 
 
+
+export let ChangeAgeActionCreator = () =>
+{
+    return {
+        type : CHANGE_AGE
+    }
+}
+export let ChangeNewAgeActionCreator = (text) =>
+{
+    return {
+        type : CHANGE_NEW_AGE,
+        text : text
+    }
+}
+export let LetChangingAgeActionCreator = () =>
+{
+    return {
+        type : LET_CHANGING_AGE,
+    }
+}
+
+
+export let ChangeCityActionCreator = () =>
+{
+    return {
+        type : CHANGE_CITY
+    }
+}
+export let ChangeNewCityActionCreator = (text) =>
+{
+    return {
+        type : CHANGE_NEW_CITY,
+        text : text
+    }
+}
+export let LetChangingCityActionCreator = () =>
+{
+    return {
+        type : LET_CHANGING_CITY,
+    }
+}
+
+
+
+export let ChangeAboutActionCreator = () =>
+{
+    return {
+        type : CHANGE_ABOUT
+    }
+}
+export let ChangeNewAboutActionCreator = (text) =>
+{
+    return {
+        type : CHANGE_NEW_ABOUT,
+        text : text
+    }
+}
+export let LetChangingAboutActionCreator = () =>
+{
+    return {
+        type : LET_CHANGING_ABOUT,
+    }
+}
+
+
+
+
+export let ChangeInteresActionCreator = () =>
+{
+    return {
+        type : CHANGE_INTERES
+    }
+}
+export let ChangeNewInteresActionCreator = (text) =>
+{
+    return {
+        type : CHANGE_NEW_INTERES,
+        text : text
+    }
+}
+export let LetChangingInteresActionCreator = () =>
+{
+    return {
+        type : LET_CHANGING_INTERES,
+    }
+}
+
+
+
+export let ChangeMeetActionCreator = () =>
+{
+    return {
+        type : CHANGE_MEET
+    }
+}
+export let ChangeNewMeetActionCreator = (text) =>
+{
+    return {
+        type : CHANGE_NEW_MEET,
+        text : text
+    }
+}
+export let LetChangingMeetActionCreator = () =>
+{
+    return {
+        type : LET_CHANGING_MEET,
+    }
+}
+
+
+
+export let ChangeWhoFindActionCreator = () =>
+{
+    return {
+        type : CHANGE_WHOFIND
+    }
+}
+export let ChangeNewWhoFindActionCreator = (text) =>
+{
+    return {
+        type : CHANGE_NEW_WHOFIND,
+        text : text
+    }
+}
+export let LetChangingWhoFindActionCreator = () =>
+{
+    return {
+        type : LET_CHANGING_WHOFIND,
+    }
+}
+
+
+
+
 let initialState =
 {
 name:'введите ваше имя',
 age: 'введите ваш возраст',
-country: 'Ваша страна',
 city:'город',
-gender:'пол',
 about: 'Добавьте информацию о себе',
 interes:'Добавьте информацию о себе',
 meet:'Добавьте информацию о себе',
 whoFind:'Добавьте информацию о себе',
-isChangable: false,
-changingText: 'редактировать профиль',
+isChangableName: false,
+isChangableAge: false,
+isChangableCity: false,
+isChangableAbout: false,
+isChangableInteres: false,
+isChangableWhoFind: false,
+isChangableMeet: false,
 newData:
 {
-newName:'введите ваше имя'
+newName:'введите ваше имя',
+newAge:'',
+newCity:'',
+newMeet:'',
+newWhoFind:'',
+newAbout:'',
+newInteres:''
 }
 }
 
@@ -119,78 +219,183 @@ let YourProfileReducer = (state = initialState, action) =>
 {
     switch(action.type)
     {
+        case LET_CHANGING_NAME:{
+    
+            return{
+                ...state,
+                isChangableName:!state.isChangableName,
+            }
+            }
+        case CHANGE_NEW_NAME:{
+                return{
+                    ...state,
+                    newData: {
+                        ...state.newData,
+                        newName:action.text
+                    }
+                }
+            }
         case CHANGE_NAME:{
             return {
                 ...state,
                 name:state.newData.newName
             }
         }
+
+
+
         case CHANGE_AGE:{
             return {
                 ...state,
-                age:action.text
+                age:state.newData.newAge
             }
         }
-        case CHANGE_COUNTRY:{
-            return {
+        case LET_CHANGING_AGE:{
+    
+            return{
                 ...state,
-                country:action.text
+                isChangableAge:!state.isChangableAge
             }
-        }
+            }
+        case CHANGE_NEW_AGE:{
+                return{
+                    ...state,
+                    newData: {
+                        ...state.newData,
+                        newAge:action.text
+                    }
+                }
+            }
+
+
         case CHANGE_CITY:{
             return {
                 ...state,
-                city:action.text
+                city:state.newData.newCity
             }
         }
-        case CHANGE_GENDER:{
-            return {
+        case LET_CHANGING_CITY:{
+    
+            return{
                 ...state,
-                gender:action.text
+                isChangableCity:!state.isChangableCity
             }
-            
-        }
+            }
+        case CHANGE_NEW_CITY:{
+                return{
+                    ...state,
+                    newData: {
+                        ...state.newData,
+                        newCity:action.text
+                    }
+                }
+            }
+
+
+
         case CHANGE_ABOUT:{
             return {
                 ...state,
-                about:action.text
+                about:state.newData.newAbout
             }
     }
-    case CHANGE_INTERES:{
-        return {
-            ...state,
-            interes:action.text
-        }
-}
-case CHANGE_MEET:{
-    return {
-        ...state,
-        meet:action.text
-    }
-}
-case CHANGE_WHOFIND:{
-    return {
-        ...state,
-        whoFind:action.text
-    }
-}
-case LET_CHANGING:{
+    case LET_CHANGING_ABOUT:{
     
-    return{
-        ...state,
-        isChangable:!state.isChangable,
-        changingText : state.isChangable ? 'редактировать профиль' : 'подтвердить'
-    }
-    }
-    case CHANGE_NEW_NAME:{
         return{
             ...state,
-            newData: {
-                ...state.newData,
-                newName:action.text
+            isChangableAbout:!state.isChangableAbout
+        }
+        }
+    case CHANGE_NEW_ABOUT:{
+            return{
+                ...state,
+                newData: {
+                    ...state.newData,
+                    newAbout:action.text
+                }
             }
         }
+
+
+
+        case CHANGE_INTERES:{
+            return {
+                ...state,
+                interes:state.newData.newInteres
+            }
     }
+    case LET_CHANGING_INTERES:{
+    
+        return{
+            ...state,
+            isChangableInteres:!state.isChangableInteres
+        }
+        }
+    case CHANGE_NEW_INTERES:{
+            return{
+                ...state,
+                newData: {
+                    ...state.newData,
+                    newInteres:action.text
+                }
+            }
+        }
+
+
+
+
+
+
+        case CHANGE_MEET:{
+            return {
+                ...state,
+                meet:state.newData.newMeet
+            }
+    }
+    case LET_CHANGING_MEET:{
+    
+        return{
+            ...state,
+            isChangableMeet:!state.isChangableMeet
+        }
+        }
+    case CHANGE_NEW_MEET:{
+            return{
+                ...state,
+                newData: {
+                    ...state.newData,
+                    newMeet:action.text
+                }
+            }
+        }
+
+
+
+
+
+        case CHANGE_WHOFIND:{
+            return {
+                ...state,
+                whoFind:state.newData.newWhoFind
+            }
+    }
+    case LET_CHANGING_WHOFIND:{
+    
+        return{
+            ...state,
+            isChangableWhoFind:!state.isChangableWhoFind
+        }
+        }
+    case CHANGE_NEW_WHOFIND:{
+            return{
+                ...state,
+                newData: {
+                    ...state.newData,
+                    newWhoFind:action.text
+                }
+            }
+        }
+
 default: return state
     }
 }

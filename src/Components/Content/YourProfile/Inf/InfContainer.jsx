@@ -1,9 +1,13 @@
 import Inf from './Inf'
 import {connect} from 'react-redux'
-import {ChangeNameActionCreator, ChangeAboutActionCreator, ChangeAgeActionCreator,
-ChangeCityActionCreator, ChangeCountryActionCreator, ChangeGenderActionCreator,
-ChangeInteresActionCreator, ChangeMeetActionCreator, ChangeWhoFindActionCreator, LetChangingActionCreator,
-ChangeNewNameActionCreator} from './../../../../Redux/YourProfileReducer'
+import {ChangeNameActionCreator, LetChangingNameActionCreator,  ChangeNewNameActionCreator,
+    ChangeAgeActionCreator,  ChangeNewAgeActionCreator, LetChangingAgeActionCreator, 
+    ChangeCityActionCreator,ChangeNewCityActionCreator,LetChangingCityActionCreator,
+    ChangeAboutActionCreator, ChangeNewAboutActionCreator, LetChangingAboutActionCreator,
+ChangeInteresActionCreator,ChangeNewInteresActionCreator, LetChangingInteresActionCreator,
+ ChangeMeetActionCreator, ChangeNewMeetActionCreator, LetChangingMeetActionCreator,
+ ChangeWhoFindActionCreator,ChangeNewWhoFindActionCreator, LetChangingWhoFindActionCreator
+ } from './../../../../Redux/YourProfileReducer'
 let mapStateToProps = (state) =>
 {
     return{
@@ -17,45 +21,102 @@ let mapDispatchToProps = (dispatch) =>
         {
             dispatch(ChangeNameActionCreator())
         },
-        changeAge:(text) =>
+        letChangingName:() =>
         {
-            dispatch(ChangeAgeActionCreator(text))
-        },
-        changeCountry:(text) =>
-        {
-            dispatch(ChangeCountryActionCreator(text))
-        },
-        changeCity:(text) =>
-        {
-            dispatch(ChangeCityActionCreator(text))
-        },
-        changeGender:(text) =>
-        {
-            dispatch(ChangeGenderActionCreator(text))
-        },
-        changeMeet:(text) =>
-        {
-            dispatch(ChangeMeetActionCreator(text))
-        },
-        changeWhoFind:(text) =>
-        {
-            dispatch(ChangeWhoFindActionCreator(text))
-        },
-        changeInteres:(text) =>
-        {
-            dispatch(ChangeInteresActionCreator(text))
-        },
-        changeAbout:(text) =>
-        {
-            dispatch(ChangeAboutActionCreator(text))
-        },
-        letChanging:() =>
-        {
-            dispatch(LetChangingActionCreator())
+            dispatch(LetChangingNameActionCreator())
         },
         changeNewName:(text)=>
         {
             dispatch(ChangeNewNameActionCreator(text))
+        },
+
+
+
+        changeAge:() =>
+        {
+            dispatch(ChangeAgeActionCreator())
+        },
+        changeNewAge:(text) =>
+        {
+            dispatch(ChangeNewAgeActionCreator(text))
+        },
+        letChangingAge:() =>
+        {
+            dispatch(LetChangingAgeActionCreator())
+        },
+
+    
+        changeCity:() =>
+        {
+            dispatch(ChangeCityActionCreator())
+        },
+        changeNewCity:(text) =>
+        {
+            dispatch(ChangeNewCityActionCreator(text))
+        },
+        letChangingCity:() =>
+        {
+            dispatch(LetChangingCityActionCreator())
+        },
+
+
+
+        changeMeet:() =>
+        {
+            dispatch(ChangeMeetActionCreator())
+        },
+        changeNewMeet:(text) =>
+        {
+            dispatch(ChangeNewMeetActionCreator(text))
+        },
+        letChangingMeet:() =>
+        {
+            dispatch(LetChangingMeetActionCreator())
+        },
+
+
+
+        changeWhoFind:() =>
+        {
+            dispatch(ChangeWhoFindActionCreator())
+        },
+        changeNewWhoFind:(text) =>
+        {
+            dispatch(ChangeNewWhoFindActionCreator(text))
+        },
+        letChangingWhoFind:() =>
+        {
+            dispatch(LetChangingWhoFindActionCreator())
+        },
+
+
+
+        changeInteres:() =>
+        {
+            dispatch(ChangeInteresActionCreator())
+        },
+        changeNewInteres:(text) =>
+        {
+            dispatch(ChangeNewInteresActionCreator(text))
+        },
+        letChangingInteres:() =>
+        {
+            dispatch(LetChangingInteresActionCreator())
+        },
+
+
+
+        changeAbout:() =>
+        {
+            dispatch(ChangeAboutActionCreator())
+        },
+        changeNewAbout:(text) =>
+        {
+            dispatch(ChangeNewAboutActionCreator(text))
+        },
+        letChangingAbout:() =>
+        {
+            dispatch(LetChangingAboutActionCreator())
         }
     }
 }
