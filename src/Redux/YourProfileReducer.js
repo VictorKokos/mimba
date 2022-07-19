@@ -1,4 +1,5 @@
 let CHANGE_NAME = "CHANGE_NAME"
+let CHANGE_NEW_NAME = "CHANGE_NEW_NAME"
 let CHANGE_AGE = "CHANGE_AGE"
 let CHANGE_COUNTRY = "CHANGE_COUNTRY"
 let CHANGE_CITY = "CHANGE_CITY"
@@ -9,11 +10,11 @@ let CHANGE_MEET = "CHANGE_MEET"
 let CHANGE_WHOFIND = "CHANGE_WHOFIND"
 let LET_CHANGING = "LET_CHANGING"
 
-export let ChangeNameActionCreator = (text) =>
+
+export let ChangeNameActionCreator = () =>
 {
     return {
-        type : CHANGE_NAME,
-        text : text
+        type : CHANGE_NAME
     }
 }
 
@@ -86,6 +87,15 @@ export let LetChangingActionCreator = () =>
         type:LET_CHANGING
     }
 }
+export let ChangeNewNameActionCreator = (text) =>
+{
+    return{
+        type:CHANGE_NEW_NAME,
+        text:text
+    }
+}
+
+
 let initialState =
 {
 name:'введите ваше имя',
@@ -98,7 +108,11 @@ interes:'Добавьте информацию о себе',
 meet:'Добавьте информацию о себе',
 whoFind:'Добавьте информацию о себе',
 isChangable: false,
-changingText: 'Изменить профиль'
+changingText: 'редактировать профиль',
+newData:
+{
+newName:'введите ваше имя'
+}
 }
 
 let YourProfileReducer = (state = initialState, action) =>
@@ -108,7 +122,7 @@ let YourProfileReducer = (state = initialState, action) =>
         case CHANGE_NAME:{
             return {
                 ...state,
-                name:action.text
+                name:state.newData.newName
             }
         }
         case CHANGE_AGE:{
@@ -161,11 +175,21 @@ case CHANGE_WHOFIND:{
     }
 }
 case LET_CHANGING:{
+    
     return{
         ...state,
         isChangable:!state.isChangable,
-        changingText:'подтвердить'
+        changingText : state.isChangable ? 'редактировать профиль' : 'подтвердить'
     }
+    }
+    case CHANGE_NEW_NAME:{
+        return{
+            ...state,
+            newData: {
+                ...state.newData,
+                newName:action.text
+            }
+        }
     }
 default: return state
     }

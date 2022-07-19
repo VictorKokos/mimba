@@ -2,7 +2,8 @@ import Inf from './Inf'
 import {connect} from 'react-redux'
 import {ChangeNameActionCreator, ChangeAboutActionCreator, ChangeAgeActionCreator,
 ChangeCityActionCreator, ChangeCountryActionCreator, ChangeGenderActionCreator,
-ChangeInteresActionCreator, ChangeMeetActionCreator, ChangeWhoFindActionCreator, LetChangingActionCreator} from './../../../../Redux/YourProfileReducer'
+ChangeInteresActionCreator, ChangeMeetActionCreator, ChangeWhoFindActionCreator, LetChangingActionCreator,
+ChangeNewNameActionCreator} from './../../../../Redux/YourProfileReducer'
 let mapStateToProps = (state) =>
 {
     return{
@@ -12,9 +13,9 @@ let mapStateToProps = (state) =>
 let mapDispatchToProps = (dispatch) =>
 {
     return{
-        changeName:(text) =>
+        changeName:() =>
         {
-            dispatch(ChangeNameActionCreator(text))
+            dispatch(ChangeNameActionCreator())
         },
         changeAge:(text) =>
         {
@@ -51,6 +52,10 @@ let mapDispatchToProps = (dispatch) =>
         letChanging:() =>
         {
             dispatch(LetChangingActionCreator())
+        },
+        changeNewName:(text)=>
+        {
+            dispatch(ChangeNewNameActionCreator(text))
         }
     }
 }
