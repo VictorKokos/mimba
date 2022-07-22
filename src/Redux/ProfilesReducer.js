@@ -1,5 +1,4 @@
 let SET_USERS = "SET_USERS"
-let EMPTY = "EMPTY"
 export let setUsers = (users) =>
 {
   return{

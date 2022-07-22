@@ -1,9 +1,8 @@
-import { legacy_createStore as createStore} from 'redux'
-import { combineReducers } from 'redux';
+import {combineReducers, configureStore } from '@reduxjs/toolkit';
 import  YourProfileReducer from './YourProfileReducer';
 import  MessengerSupportReducer  from './MessengerSupportReducer';
 import ProfilesReducer from './ProfilesReducer'
-const reducers = combineReducers
+const allReducers = combineReducers
 (
 
     {
@@ -13,7 +12,10 @@ const reducers = combineReducers
 }
 )
 
-const store = createStore(reducers)
+const store = configureStore({
+    reducer:allReducers,
+    }
+)
 window.store = store;
 
 export default store;

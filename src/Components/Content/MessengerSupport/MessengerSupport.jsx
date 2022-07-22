@@ -7,13 +7,13 @@ const MessengerSupport = (props) =>
 
   let OnAddMessage = () => 
   {
-    let text = props.MessengerSupport.NewMessage.text
-    props.AddMessage(text)
+    props.addMessage()
   }
   let OnChangeNewMessage = (e) =>
   {
-    let text = e.target.value;
-    props.ChangeNewMessage(text)
+
+    var text = e.target.value;
+    props.changeNewMessage(text)
   }
  return(
    <div className ={S.messageBoard}>

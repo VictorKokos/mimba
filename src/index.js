@@ -8,8 +8,7 @@ import store from './Redux/ReduxStore'
 import { Provider } from 'react-redux';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-let renderAll = (store) =>
-{
+
 root.render(
   <BrowserRouter>
     <Provider store = {store}>
@@ -17,8 +16,6 @@ root.render(
     </Provider>
   </BrowserRouter>
 );
-}
-renderAll(store);
 
 
 

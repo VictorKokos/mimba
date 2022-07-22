@@ -1,18 +1,16 @@
-let ADD_MESSAGE = 'ADD_MESSAGE';
-let CHANGE_NEW_MESSAGE = 'CHANGE_NEW_MESSAGE';
+import {createAction, createReducer} from '@reduxjs/toolkit'
+
+//let ADD_MESSAGE = 'ADD_MESSAGE';
+//let CHANGE_NEW_MESSAGE = 'CHANGE_NEW_MESSAGE';
 
 
-export let addMessage = (text) =>({
-    type:ADD_MESSAGE,
-     message:text 
-  })
-  export let changeNewMessage = (text) =>
-  ({
-  
-    type:CHANGE_NEW_MESSAGE,
-     textFromTextarea:text
-  
-  })
+
+export const addMessage = createAction('ADD_MESSAGE')
+export const changeNewMessage = createAction('CHANGE_NEW_MESSAGE', (text) => {return {payload:
+  {
+    text:text
+  }}})
+
 
   let initialState =
 {
@@ -20,44 +18,30 @@ export let addMessage = (text) =>({
         [
           
         ],
-        NewMessage:{text:""}
+        NewMessage:{text:""},
+        messageCount:0
 }
   
 
-let messageCount = 0;
-let MessengerSupportReducer = (state = initialState, action) =>
-{
-switch(action.type)
-{
-  case ADD_MESSAGE :
+const MessengerSupportReducer = createReducer( initialState, {
+  [addMessage] : (state) =>
   {
-    messageCount++;
-    let newMessage =
+      state.messageCount++;
+      let newMessage =
       {
-        id:messageCount, message:action.message
+        id:state.messageCount, message:state.NewMessage
       }
-     return{
-      ...state,
-      Messages : [...state.Messages, newMessage], //Вместо push
-      NewMessage:{
-        ...state.NewMessage,
-        text : ""
-      }
-    }
-  
-  }
-  case CHANGE_NEW_MESSAGE:
+      
+      state.Messages.push(newMessage)
+      state.NewMessage = {text:""}
+  },
+  [changeNewMessage]: (state, action) =>
   {
-    return {
-      ...state,
-      NewMessage : 
-      {
-        ...state.NewMessage,
-        text : action.textFromTextarea
-      }
-    }
+    state.NewMessage = action.payload.text
   }
-  default: return initialState
-}
-}
-export default MessengerSupportReducer
+      
+ 
+  }
+)
+
+export default MessengerSupportReducer;
