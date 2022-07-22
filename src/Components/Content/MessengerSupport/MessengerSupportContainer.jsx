@@ -1,6 +1,6 @@
 import React from 'react'
 import MessengerSupport from './MessengerSupport'
-import {addMessageActionCreator, changeNewMessageActionCreator} from '../../../Redux/MessengerSupportReducer'
+import {addMessage, changeNewMessage} from '../../../Redux/MessengerSupportReducer'
 import { connect } from 'react-redux';
 
 let mapStateToProps = (state) => {
@@ -9,17 +9,6 @@ let mapStateToProps = (state) => {
   }
   
 }
-let mapDispatchToProps = (dispatch) =>
-{
-  return {
-    AddMessage: (text) => {
-      dispatch(addMessageActionCreator(text))
-    },
-    ChangeNewMessage: (text) =>
-    {
-      dispatch(changeNewMessageActionCreator(text))
-    }
-   }
-}
-const MessengerSupportContainer = connect (mapStateToProps, mapDispatchToProps) (MessengerSupport)
+
+const MessengerSupportContainer = connect (mapStateToProps, {addMessage, changeNewMessage}) (MessengerSupport)
 export default MessengerSupportContainer;
