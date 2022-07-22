@@ -1,7 +1,5 @@
 import {createAction, createReducer} from '@reduxjs/toolkit'
 
-//let ADD_MESSAGE = 'ADD_MESSAGE';
-//let CHANGE_NEW_MESSAGE = 'CHANGE_NEW_MESSAGE';
 
 
 

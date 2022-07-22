@@ -1,11 +1,9 @@
-let SET_USERS = "SET_USERS"
-export let setUsers = (users) =>
-{
-  return{
-type:SET_USERS,
- users: users
-  }
-}
+import { createAction, createReducer } from "@reduxjs/toolkit"
+
+
+export let setUsers = createAction('SET_USERS',
+ (users) => {return{payload:{users:users}}})
+
 
 
 
@@ -18,21 +16,14 @@ type:SET_USERS,
 maxLength : 12
 }
   
-let ProfilesReducer = (state = initialState, action) =>
-{
-switch(action.type)
-{
-  case SET_USERS:
-    {
-      return{
-        ...state,
-        PrInf:[...state.PrInf,
-               ...action.users]
-      }
-    }
-   
-}
 
-return state
-}
+
+let ProfilesReducer = createReducer(initialState,
+  {
+    [setUsers] : (state, action)=>
+    {
+      state.PrInf.push(...action.payload.users)
+    }
+  })
+
 export default ProfilesReducer
