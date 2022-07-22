@@ -12,15 +12,14 @@ let renderAll = (store) =>
 {
 root.render(
   <BrowserRouter>
-  <React.StrictMode>
     <Provider store = {store}>
     <App/>
     </Provider>
-  </React.StrictMode>
   </BrowserRouter>
 );
 }
 renderAll(store);
+
 
 
 
