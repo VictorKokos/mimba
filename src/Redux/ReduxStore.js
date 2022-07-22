@@ -1,4 +1,4 @@
-import { createStore } from 'redux';
+import { legacy_createStore as createStore} from 'redux'
 import { combineReducers } from 'redux';
 import  YourProfileReducer from './YourProfileReducer';
 import  MessengerSupportReducer  from './MessengerSupportReducer';
@@ -14,5 +14,6 @@ const reducers = combineReducers
 )
 
 const store = createStore(reducers)
+window.store = store;
 
 export default store;

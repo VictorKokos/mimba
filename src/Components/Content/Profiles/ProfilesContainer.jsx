@@ -1,7 +1,7 @@
 import Profile from "./Profile/Profile";
 import Profiles from "./Profiles";
 import {connect} from 'react-redux'
-import {SetUsersActionCreator, EmptyActionCreator} from './../../../Redux/ProfilesReducer'
+import {setUsers} from './../../../Redux/ProfilesReducer'
 
 let mapStateToProps = (state) =>
 {
@@ -9,14 +9,7 @@ let mapStateToProps = (state) =>
        Profiles : state.Profiles
     }
 }
-let mapDispatchToProps = (dispatch) =>
-{
-    
-    return {
-        setUsers:(users) =>{ dispatch(SetUsersActionCreator(users))},
-        empty: () => {dispatch(EmptyActionCreator())}
-    }
-}
 
-const ProfilesContainer = connect(mapStateToProps, mapDispatchToProps) (Profiles)
+
+const ProfilesContainer = connect(mapStateToProps, {setUsers}) (Profiles)
 export default ProfilesContainer

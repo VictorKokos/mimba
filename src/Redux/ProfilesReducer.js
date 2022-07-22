@@ -1,6 +1,6 @@
 let SET_USERS = "SET_USERS"
 let EMPTY = "EMPTY"
-export let SetUsersActionCreator = (users) =>
+export let setUsers = (users) =>
 {
   return{
 type:SET_USERS,
@@ -8,12 +8,7 @@ type:SET_USERS,
   }
 }
 
-export let EmptyActionCreator = () =>
-{
-  return{
-    type:EMPTY
-  }
-}
+
 
   let initialState =
 {
@@ -36,13 +31,7 @@ switch(action.type)
                ...action.users]
       }
     }
-    case EMPTY:
-      {
-        return{
-          ...state,
-          PrInf:[]
-        }
-      }
+   
 }
 
 return state

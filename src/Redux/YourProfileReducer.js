@@ -32,19 +32,19 @@ let LET_CHANGING_WHOFIND = "LET_CHANGING_WHOFIND"
 
 
 
-export let ChangeNameActionCreator = () =>
+export let changeName = () =>
 {
     return {
         type : CHANGE_NAME
     }
 }
-export let LetChangingNameActionCreator = () =>
+export let letChangingName = () =>
 {
     return{
         type:LET_CHANGING_NAME
     }
 }
-export let ChangeNewNameActionCreator = (text) =>
+export let changeNewName= (text) =>
 {
     return{
         type:CHANGE_NEW_NAME,
@@ -54,20 +54,20 @@ export let ChangeNewNameActionCreator = (text) =>
 
 
 
-export let ChangeAgeActionCreator = () =>
+export let changeAge = () =>
 {
     return {
         type : CHANGE_AGE
     }
 }
-export let ChangeNewAgeActionCreator = (text) =>
+export let changeNewAge = (text) =>
 {
     return {
         type : CHANGE_NEW_AGE,
         text : text
     }
 }
-export let LetChangingAgeActionCreator = () =>
+export let letChangingAge = () =>
 {
     return {
         type : LET_CHANGING_AGE,
@@ -75,20 +75,20 @@ export let LetChangingAgeActionCreator = () =>
 }
 
 
-export let ChangeCityActionCreator = () =>
+export let changeCity = () =>
 {
     return {
         type : CHANGE_CITY
     }
 }
-export let ChangeNewCityActionCreator = (text) =>
+export let changeNewCity = (text) =>
 {
     return {
         type : CHANGE_NEW_CITY,
         text : text
     }
 }
-export let LetChangingCityActionCreator = () =>
+export let letChangingCity = () =>
 {
     return {
         type : LET_CHANGING_CITY,
@@ -97,20 +97,20 @@ export let LetChangingCityActionCreator = () =>
 
 
 
-export let ChangeAboutActionCreator = () =>
+export let changeAbout = () =>
 {
     return {
         type : CHANGE_ABOUT
     }
 }
-export let ChangeNewAboutActionCreator = (text) =>
+export let changeNewAbout = (text) =>
 {
     return {
         type : CHANGE_NEW_ABOUT,
         text : text
     }
 }
-export let LetChangingAboutActionCreator = () =>
+export let letChangingAbout = () =>
 {
     return {
         type : LET_CHANGING_ABOUT,
@@ -120,20 +120,20 @@ export let LetChangingAboutActionCreator = () =>
 
 
 
-export let ChangeInteresActionCreator = () =>
+export let changeInteres = () =>
 {
     return {
         type : CHANGE_INTERES
     }
 }
-export let ChangeNewInteresActionCreator = (text) =>
+export let changeNewInteres = (text) =>
 {
     return {
         type : CHANGE_NEW_INTERES,
         text : text
     }
 }
-export let LetChangingInteresActionCreator = () =>
+export let letChangingInteres = () =>
 {
     return {
         type : LET_CHANGING_INTERES,
@@ -142,20 +142,20 @@ export let LetChangingInteresActionCreator = () =>
 
 
 
-export let ChangeMeetActionCreator = () =>
+export let changeMeet = () =>
 {
     return {
         type : CHANGE_MEET
     }
 }
-export let ChangeNewMeetActionCreator = (text) =>
+export let changeNewMeet = (text) =>
 {
     return {
         type : CHANGE_NEW_MEET,
         text : text
     }
 }
-export let LetChangingMeetActionCreator = () =>
+export let letChangingMeet = () =>
 {
     return {
         type : LET_CHANGING_MEET,
@@ -164,20 +164,20 @@ export let LetChangingMeetActionCreator = () =>
 
 
 
-export let ChangeWhoFindActionCreator = () =>
+export let changeWhoFind = () =>
 {
     return {
         type : CHANGE_WHOFIND
     }
 }
-export let ChangeNewWhoFindActionCreator = (text) =>
+export let changeNewWhoFind = (text) =>
 {
     return {
         type : CHANGE_NEW_WHOFIND,
         text : text
     }
 }
-export let LetChangingWhoFindActionCreator = () =>
+export let letChangingWhoFind = () =>
 {
     return {
         type : LET_CHANGING_WHOFIND,
