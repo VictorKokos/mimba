@@ -24,6 +24,8 @@ export const changeNewMessage = createAction('CHANGE_NEW_MESSAGE', (text) => {re
 const MessengerSupportReducer = createReducer( initialState, {
   [addMessage] : (state) =>
   {
+    if(state.NewMessage.text != "")
+    {
       state.messageCount++;
       let newMessage =
       {
@@ -32,6 +34,7 @@ const MessengerSupportReducer = createReducer( initialState, {
       
       state.Messages.push(newMessage)
       state.NewMessage = {text:""}
+    }
   },
   [changeNewMessage]: (state, action) =>
   {
