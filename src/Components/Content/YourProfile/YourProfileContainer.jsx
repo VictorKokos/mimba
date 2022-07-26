@@ -1,5 +1,7 @@
 import YourProfile from './YourProfile'
 import {connect} from 'react-redux'
+import { compose } from 'redux'
+import withLoginNavigate from '../../../HOC/withLoginNavigate'
 let mapStateToProps = (state) =>
 {
     return{
@@ -7,5 +9,11 @@ let mapStateToProps = (state) =>
     }
 }
 
-let YourProfileContainer = connect(mapStateToProps) (YourProfile)
+let YourProfileContainer = compose(
+    connect(mapStateToProps),
+ 
+)
+(YourProfile)
+
+
 export default YourProfileContainer;

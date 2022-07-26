@@ -2,8 +2,10 @@ import React from 'react';
 import S from './YourProfile.module.css'
 import iSavva from './../../../Source/Portraits/iSavva.jpg'
 import InfContainer from './Inf/InfContainer'
+import { Navigate } from 'react-router-dom';
 const Profile = (props) => 
 {
+ 
     return(
       <div className={S.profile}>
    <div className={S.photo}> 

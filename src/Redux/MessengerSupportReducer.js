@@ -17,7 +17,7 @@ export const changeNewMessage = createAction('CHANGE_NEW_MESSAGE', (text) => {re
           
         ],
         NewMessage:{text:""},
-        messageCount:0
+        messageCount:0,
 }
   
 

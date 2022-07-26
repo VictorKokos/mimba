@@ -15,10 +15,10 @@ import S from './Content.module.css'
 
 const Content = (props) => 
 {
-  let profileRoutes = props.Profiles.PrInf.map((elem) => (<Route  exact path={"/Profile/" + elem.id} element={<Profile name={elem.name}
+  let profileRoutes = props.Profiles.PrInf.map((elem) => (<Route  path={"/Profile/" + elem.id} element={<Profile name={elem.name}
   interes={elem.interes} about={elem.about} meet={elem.meet} whoFind={elem.whoFind}
    photo={elem.photo} age = {elem.age} city={elem.city} country={elem.country} id={elem.id} key={elem.id}/>}/>))
-   let messageRoutes = props.Profiles.PrInf.map((elem) => (<Route  exact path={"/Messenger/" + elem.id} element={<Messenger  name={elem.name}
+   let messageRoutes = props.Profiles.PrInf.map((elem) => (<Route  exact path={"/Messenger/" + elem.id} element={<MessengerSupportContainer  name={elem.name}
    interes={elem.interes} about={elem.about} meet={elem.meet} whoFind={elem.whoFind}
     photo={elem.photo} age = {elem.age} city={elem.city} country={elem.country} id={elem.id} key={elem.id}/>}/>))
     return(
