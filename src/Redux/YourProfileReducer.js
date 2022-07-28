@@ -90,12 +90,6 @@ newInteres:''
 
 let YourProfileReducer = createReducer(initialState,
     {
-        [changeIsAuth]:(state) =>
-        {
-            state.isAuth = true
-          
-        },
-
 
 
         [changeName] : (state) =>
