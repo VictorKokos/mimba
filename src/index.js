@@ -6,13 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import store from './Redux/ReduxStore'
 import { Provider } from 'react-redux';
-
+import {Routes, Route} from "react-router-dom";
+import ConnectedLogin from './Components/Content/Login/LoginContainer';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <BrowserRouter>
     <Provider store = {store}>
-    <App/>
+    <Routes>
+    <Route path="/mimba/*" element={<App/>}/>
+    <Route exact path="/" element={<ConnectedLogin/>}/>
+    </Routes>
     </Provider>
   </BrowserRouter>
 );

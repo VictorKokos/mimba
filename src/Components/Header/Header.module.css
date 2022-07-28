@@ -7,7 +7,7 @@ text-align: center;
 }
 .header div
 {
-  display: inline;
+  display: block;
 }
 .logo img 
 {
@@ -37,4 +37,15 @@ text-align: center;
 .znakomstva:active, .profile:active, .messages:active, .search:active
 {
   color:rgb(255, 238, 0)
+}
+.Choice
+{
+  display: grid;
+  position: absolute;
+  width:10%;
+  background-color: rgb(182, 182, 220);
+}
+.oneChoice
+{
+  display: block;
 }

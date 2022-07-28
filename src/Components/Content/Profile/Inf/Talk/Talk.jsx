@@ -5,7 +5,7 @@ const Talk = (props) =>
 {
     return(
      
-     <NavLink to={"/Messenger/" + props.id} className={S.talk}>
+     <NavLink to={"/mimba/MessengerSupport/"} className={S.talk}>
 Напиши Мне
      </NavLink>
     )

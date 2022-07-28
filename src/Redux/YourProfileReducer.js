@@ -1,5 +1,9 @@
 import {createAction, createReducer} from '@reduxjs/toolkit'
 
+export let changeIsAuth = createAction('CHANGE_IS_AUTH')
+
+
+
 
 
 export let changeName = createAction('CHANGE_NAME')
@@ -86,6 +90,14 @@ newInteres:''
 
 let YourProfileReducer = createReducer(initialState,
     {
+        [changeIsAuth]:(state) =>
+        {
+            state.isAuth = true
+          
+        },
+
+
+
         [changeName] : (state) =>
         {
             state.name = state.newData.newName
