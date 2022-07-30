@@ -9,7 +9,7 @@ import Footer from './Components/Footer/Footer'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import HeaderContainer from './Components/Header/HeaderContainer';
 
-const App = (props) => {
+let App = () => {
   return (
     
     <div className="app-wrapper">
@@ -22,6 +22,8 @@ const App = (props) => {
    
     </div>
   );
-}
+  }
+
+  
 
 export default App;

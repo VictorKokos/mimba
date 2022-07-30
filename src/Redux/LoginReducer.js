@@ -1,6 +1,6 @@
 import {createAction, createReducer} from '@reduxjs/toolkit'
 
-
+export const letEnter = createAction('letEnter')
 
 export const checkIfNameFilled = createAction('checkIfNameFilled', (text) => {return {payload:
   {
@@ -12,8 +12,11 @@ export const checkIfNameFilled = createAction('checkIfNameFilled', (text) => {re
     }}})
   export const returnToLogin = createAction('returnToLogin')
 
+
+
   let initialState =
 {
+  isAuth:false,
         areFilled:
         {
             isNameFilled:false,
@@ -51,6 +54,12 @@ const LoginReducer = createReducer( initialState, {
   [returnToLogin] : (state) =>
   {
     state.areFilled.isNameFilled = false;
+    state.areFilled.isEmailFilled = false;
+    state.isAuth = false;
+  },
+  [letEnter] : (state) =>
+  {
+    state.isAuth = true
   }
   
       

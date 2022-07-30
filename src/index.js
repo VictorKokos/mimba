@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import AppContainer from './AppContainer';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import store from './Redux/ReduxStore'
@@ -10,11 +10,12 @@ import {Routes, Route} from "react-router-dom";
 import ConnectedLogin from './Components/Content/Login/LoginContainer';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+
 root.render(
   <BrowserRouter>
     <Provider store = {store}>
     <Routes>
-    <Route path="/mimba/*" element={<App/>}/>
+    <Route path="/mimba/*" element={<AppContainer/>}/>
     <Route exact path="/" element={<ConnectedLogin/>}/>
     </Routes>
     </Provider>

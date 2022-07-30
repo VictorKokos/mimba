@@ -6,7 +6,8 @@ import {setUsers} from './../../../Redux/ProfilesReducer'
 let mapStateToProps = (state) =>
 {
     return {
-       Profiles : state.Profiles
+       Profiles : state.Profiles,
+       isAuth : state.Login.isAuth
     }
 }
 

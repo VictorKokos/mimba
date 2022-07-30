@@ -5,7 +5,7 @@ let mapStateToProps = (state) =>
 {
     return{
           Profiles : state.Profiles,
-       isAuth:state.YourProfile.isAuth
+     
     }
 }
 let ContentContainer = connect (mapStateToProps) (Content)

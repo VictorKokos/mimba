@@ -8,11 +8,12 @@ const Button = (props) =>
     let sendName=()=>
     {
        props.changeName()
+       props.letEnter()
     }
     return(
           (props.Login.areFilled.isNameFilled != "" && props.Login.areFilled.isEmailFilled)
         ?
-        <NavLink to="/mimba/Swiper">  <button onClick={sendName}>Готово</button></NavLink>
+        <NavLink to="/mimba/Swiper" >  <button onClick={sendName}>Готово</button></NavLink>
         :<button>Готово</button> 
     )
 }
@@ -45,7 +46,7 @@ props.checkIfEmailFilled(text)
 <div> <input onChange={getName} type= "text" /> Ваше имя
       <input onChange={getEmail}  type= "email" /> Ваш Email
 </div> 
-<Button Login={props.Login} changeName={props.changeName}/>
+<Button Login={props.Login} changeName={props.changeName} letEnter={props.letEnter} />
 </form> 
 
 </div>

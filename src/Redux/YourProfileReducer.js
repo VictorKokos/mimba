@@ -58,7 +58,7 @@ export let changeNewName= createAction('CHANGE_NEW_NAME',
 
 let initialState =
 {
-    isAuth:false,
+
 name:'введите ваше имя',
 age: 'введите ваш возраст',
 city:'город',
