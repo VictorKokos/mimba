@@ -3,6 +3,7 @@ import  YourProfileReducer from './YourProfileReducer';
 import  MessengerSupportReducer  from './MessengerSupportReducer';
 import ProfilesReducer from './ProfilesReducer'
 import LoginReducer from './LoginReducer';
+import { devToolsEnhancer } from 'redux-devtools-extension';
 const allReducers = combineReducers
 (
 
@@ -16,6 +17,7 @@ const allReducers = combineReducers
 
 const store = configureStore({
     reducer:allReducers,
+    devTools:devToolsEnhancer()
     }
 )
 window.store = store;

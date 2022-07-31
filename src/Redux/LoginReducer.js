@@ -2,18 +2,18 @@ import {createAction, createReducer} from '@reduxjs/toolkit'
 
 export const letEnter = createAction('letEnter')
 
-export const checkIfNameFilled = createAction('checkIfNameFilled', (text) => {return {payload:
+export const changeNameField = createAction('changeName', (text) => {return {payload:
   {
     text:text
   }}})
-  export const checkIfEmailFilled = createAction('checkIfEmailFilled', (text) => {return {payload:
+  export const changeEmailField = createAction('changeEmail', (text) => {return {payload:
     {
       text:text
     }}})
   export const returnToLogin = createAction('returnToLogin')
 
-
-
+export const checkNameField = createAction('checkIfNameFilled')
+export const checkEmailField = createAction('checkIfEmailFilled')
   let initialState =
 {
   isAuth:false,
@@ -21,27 +21,40 @@ export const checkIfNameFilled = createAction('checkIfNameFilled', (text) => {re
         {
             isNameFilled:false,
             isEmailFilled:false
+        },
+        Fields:
+        {
+          name:'',
+          email:''
         }
 }
   
 
 const LoginReducer = createReducer( initialState, {
-  [checkIfNameFilled] : (state, action) =>
+  [checkNameField]:(state) =>
   {
-    if(action.payload.text)
+    if(state.Fields.name)
     {
-     
-        state.areFilled.isNameFilled = true;
+      state.areFilled.isNameFilled = true
     }
     else
     {
         state.areFilled.isNameFilled = false;
     }
   },
-  [checkIfEmailFilled] : (state, action) =>
+  [changeNameField] : (state, action) =>
+  {
+    state.Fields.name = action.payload.text
+   
+  },
+  [changeEmailField] : (state, action) =>
+  {
+    state.Fields.email = action.payload.text
+  },
+  [checkEmailField] : (state) =>
   {
     const pattern = /[a-zA-Z0-9]+[\.]?([a-zA-Z0-9]+)?[\@][a-z]{3,9}[\.][a-z]{2,5}/g;
-   const result = pattern.test(action.payload.text);
+   const result = pattern.test(state.Fields.email);
    if(result)
    {
     state.areFilled.isEmailFilled = true;
