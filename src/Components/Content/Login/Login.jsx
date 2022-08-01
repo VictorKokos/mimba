@@ -20,8 +20,9 @@ const Button = (props) =>
       props.checkNameField()
     }
     return(
-          (props.Login.areFilled.isNameFilled != "" && props.Login.areFilled.isEmailFilled)
-        ?
+         // (props.Login.areFilled.isNameFilled && props.Login.areFilled.isEmailFilled)
+    (true)
+          ?
         <NavLink to="/mimba/Swiper" >  <button onClick={letEnter}>Готово</button></NavLink>
         :<button onClick={notLetEnter}>Готово</button> 
     )

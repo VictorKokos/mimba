@@ -2,10 +2,11 @@ import {createAction, createReducer} from '@reduxjs/toolkit'
 
 export let changeIsAuth = createAction('CHANGE_IS_AUTH')
 
+export let saveNewPhoto = createAction('saveNewPhoto',
+(photo) =>{return{payload:{photo:photo}}})
 
 
-
-
+//Это полный пиздец и это надо фиксить
 export let changeName = createAction('CHANGE_NAME')
 export let letChangingName = createAction('LET_CHANGING_NAME')
 export let changeNewName= createAction('CHANGE_NEW_NAME',
@@ -58,7 +59,7 @@ export let changeNewName= createAction('CHANGE_NEW_NAME',
 
 let initialState =
 {
-
+photo: '/images/users/16 (3).png',
 name:'введите ваше имя',
 age: 'введите ваш возраст',
 city:'город',
@@ -90,7 +91,11 @@ newInteres:''
 
 let YourProfileReducer = createReducer(initialState,
     {
-
+        [saveNewPhoto]:(state,action) =>
+        {
+            state.photo = action.payload.photo
+      
+        },
 
         [changeName] : (state) =>
         {

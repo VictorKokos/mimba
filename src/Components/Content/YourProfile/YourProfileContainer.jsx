@@ -1,6 +1,7 @@
 import YourProfile from './YourProfile'
 import {connect} from 'react-redux'
 import { compose } from 'redux'
+import {saveNewPhoto} from '../../../Redux/YourProfileReducer'
 let mapStateToProps = (state) =>
 {
     return{
@@ -9,7 +10,7 @@ let mapStateToProps = (state) =>
 }
 
 let YourProfileContainer = compose(
-    connect(mapStateToProps),
+    connect(mapStateToProps, {saveNewPhoto}),
  
 )
 (YourProfile)
